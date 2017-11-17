@@ -25,7 +25,7 @@ class Question{
       db.run(sql, [self.content], function(err, result){
         self.id = this.lastID;
         console.log(self.id);
-        console.log(super.id);
+        console.log(super().id);
         resolve(self);
       })
 
