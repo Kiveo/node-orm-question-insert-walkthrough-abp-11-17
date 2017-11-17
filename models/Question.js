@@ -24,6 +24,8 @@ class Question{
     return new Promise(function(resolve) {
       db.run(sql, [self.content], function(err, result){
         self.id = this.lastID;
+        console.log(self.id);
+        console.log(super.id);
         resolve(self);
       })
 
